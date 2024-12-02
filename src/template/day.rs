@@ -38,8 +38,8 @@ pub(crate) fn run() {
 fn part_1(file:String) -> String {
     let mut final_value = String::new();
     // split the string on newlines
-    let lines = file.split("\n");
-    debug!("Raw_lines: {:?}", lines.clone().collect::<Vec<&str>>());
+    let lines = file.split("\n").collect::<Vec<&str>>().iter().map(|x| x.trim()).collect::<Vec<&str>>();
+    debug!("Raw_lines: {:?}", lines);
 
     final_value
 }
@@ -47,8 +47,8 @@ fn part_1(file:String) -> String {
 fn part_2(file:String) -> String {
     let mut final_value = String::new();
     // split the string on newlines
-    let lines = file.split("\n");
-    debug!("Raw_lines: {:?}", lines.clone().collect::<Vec<&str>>());
+    let lines = file.split("\n").collect::<Vec<&str>>().iter().map(|x| x.trim()).collect::<Vec<&str>>();
+    debug!("Raw_lines: {:?}", lines);
 
 
     final_value
