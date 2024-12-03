@@ -9,6 +9,7 @@ dependencies = [
  "clipboard",
  "env_logger",
  "log",
+ "regex",
 ]
 
 [[package]]
