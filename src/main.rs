@@ -4,6 +4,7 @@ mod helper_functions;
 mod template;
 mod day_1;
 mod day_3;
+mod day_4;
 
 fn main() {
     // Initialize the logger
@@ -11,6 +12,7 @@ fn main() {
 
     // day_1::day::run();
 
-    day_3::day::run();
+    // day_3::day::run();
 
+    day_4::day::run();
 }
