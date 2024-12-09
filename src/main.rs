@@ -5,6 +5,11 @@ mod template;
 mod day_1;
 mod day_3;
 mod day_4;
+mod day_5;
+mod day_6;
+mod day_7;
+mod day_8;
+mod day_9;
 
 fn main() {
     // Initialize the logger
@@ -14,5 +19,11 @@ fn main() {
 
     // day_3::day::run();
 
-    day_4::day::run();
+    // day_4::day::run();
+
+    // day_5::day::run();
+    day_6::day::run();
+    // day_7::day::run();
+    // day_8::day::run();
+    // day_9::day::run();
 }
