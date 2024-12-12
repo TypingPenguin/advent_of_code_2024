@@ -1,18 +1,21 @@
+use std::collections::HashMap;
 use std::path::{absolute, Path};
 use crate::helper_functions;
 use log::{debug, info};
 use std::env;
+use log::Level::Debug;
 use crate::helper_functions::copy_to_clipboard;
-// const MODE: &str = "test_1";
+const MODE: &str = "test_1";
 // const MODE: &str = "final_1";
-
 // const MODE: &str = "test_2";
-const MODE: &str = "final_2";
+// const MODE: &str = "final_2";
 
 pub(crate) fn run() {
     //get current working directory
     let file = get_data();
     let mut final_value = String::new();
+    let now = std::time::Instant::now();
+
 
     // Run correct code based on mode
     match MODE {
@@ -33,13 +36,18 @@ pub(crate) fn run() {
         Err(e) => eprintln!("Failed to copy to clipboard: {}", e),
     }
 
+    //print how long it took
+    let elapsed = now.elapsed();
+    info!("Time it took to run: {}.{}", elapsed.as_secs(), elapsed.subsec_millis());
+
 }
 
 fn part_1(file:String) -> String {
     let mut final_value = String::new();
     // split the string on newlines
-    let lines = file.split("\n").collect::<Vec<&str>>().iter().map(|x| x.trim()).collect::<Vec<&str>>();
-    debug!("Raw_lines: {:?}", lines);
+    let lines = file.split("\n").map(|x| x.trim()).collect::<Vec<&str>>();
+    debug!("Raw_lines: {:?}", lines.clone());
+
 
     final_value
 }
@@ -47,8 +55,8 @@ fn part_1(file:String) -> String {
 fn part_2(file:String) -> String {
     let mut final_value = String::new();
     // split the string on newlines
-    let lines = file.split("\n").collect::<Vec<&str>>().iter().map(|x| x.trim()).collect::<Vec<&str>>();
-    debug!("Raw_lines: {:?}", lines);
+    let lines = file.split("\n").map(|x| x.trim()).collect::<Vec<&str>>();
+    debug!("Raw_lines: {:?}", lines.clone());
 
 
     final_value
