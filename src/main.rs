@@ -14,6 +14,7 @@ mod day_9;
 // mod day_10;
 // mod day_11;
 mod day_12;
+mod day_13;
 
 fn main() {
     // Initialize the logger
@@ -34,5 +35,6 @@ fn main() {
 
     // day_10::day::run();
     // day_11::day::run();
-    day_12::day::run();
+    // day_12::day::run();
+    day_13::day::run();
 }
