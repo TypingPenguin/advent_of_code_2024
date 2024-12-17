@@ -16,6 +16,9 @@ mod day_9;
 mod day_12;
 mod day_13;
 
+mod day_14;
+mod day_15;
+
 fn main() {
     // Initialize the logger
     env_logger::builder().filter_level(log::LevelFilter::Debug).init();
@@ -36,5 +39,7 @@ fn main() {
     // day_10::day::run();
     // day_11::day::run();
     // day_12::day::run();
-    day_13::day::run();
+    // day_13::day::run();
+    // day_14::day::run();
+    day_15::day::run();
 }
